@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#facts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="about.html">#facts</a></h1>
+    <p class="filter-bar" id="filter-bar" hidden>
+      <span id="filter-tag"></span>
+      <button type="button" id="filter-reset">× show_all_facts</button>
+    </p>
+  </header>
+
+  <main>
+    <div class="columns" id="grid">
+      <form class="item form-card" id="fact-form">
+        <img id="image-preview" alt="" hidden>
+        <input type="text" name="tag" id="tag" placeholder="#what_is_the_fact_about?" maxlength="60" required>
+        <textarea name="text" id="text" placeholder="fact..." maxlength="1000" rows="4" required></textarea>
+        <div class="field">
+          <input type="text" name="author" id="author" placeholder="Author?" maxlength="400">
+          <p class="hint">имя + ссылка на себя, если хочешь: Эмиль https://t.me/emil</p>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="submit-btn">send_fact!</button>
+          <label class="image-link">
+            <input type="file" id="image" name="image" accept="image/jpeg,image/png,image/gif,image/webp" hidden>
+            <span id="image-hint">+ image/gif</span>
+          </label>
+        </div>
+        <p class="form-error" id="form-error" hidden></p>
+      </form>
+      <!-- сюда подгружаются факты -->
+    </div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

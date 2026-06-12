@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+
+# данные старой версии с Express-сервером, в новой архитектуре не используются
+data/
+uploads/
+
+SETUP.md
