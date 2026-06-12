@@ -142,6 +142,17 @@ function factCard(fact) {
     card.appendChild(author);
   }
 
+  if (fact.createdAt && fact.createdAt.toDate) {
+    const date = document.createElement('div');
+    date.className = 'date';
+    date.textContent = fact.createdAt.toDate().toLocaleDateString('ru-RU', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
+    card.appendChild(date);
+  }
+
   return card;
 }
 

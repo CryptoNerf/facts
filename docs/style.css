@@ -110,6 +110,12 @@ main {
   text-decoration: underline;
 }
 
+.item .date {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #9aa0a6;
+}
+
 /* форма */
 
 .form-card {
